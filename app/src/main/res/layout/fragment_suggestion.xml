@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.SuggestionFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Title:"
+            android:textSize="25sp"
+            android:layout_alignParentTop="true"
+            android:id="@+id/title"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_info"
+            android:layout_marginTop="10dp"
+            app:met_floatingLabel="normal"
+            android:hint="Title"
+            android:layout_below="@id/title"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recycler_view"
+            android:layout_below="@id/title_info"
+            android:background="@color/colorPrimary"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Description:"
+            android:textSize="25sp"
+            android:layout_below="@id/title_info"
+            android:id="@+id/description"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/description_info"
+            android:layout_marginTop="10dp"
+            app:met_floatingLabel="normal"
+            android:hint="Description"
+            android:layout_below="@id/description"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Skill:"
+            android:textSize="25sp"
+            android:id="@+id/skill"
+            android:layout_below="@id/description_info"/>
+
+        <RatingBar
+            android:id="@+id/rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="3"
+            android:rating="2"
+            android:layout_centerHorizontal="true"
+            android:stepSize="1"
+            android:layout_below="@id/skill"/>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Date:"
+            android:textSize="25sp"
+            android:id="@+id/dateinf"
+            android:layout_below="@id/rating_bar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/dateinf"
+            android:id="@+id/date_time">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="date"
+                android:id="@+id/date"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="time"
+                android:id="@+id/time"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Location:"
+            android:textSize="25sp"
+            android:id="@+id/location"
+            android:layout_below="@id/date_time"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="location"
+            android:id="@+id/location_inf"
+            android:layout_below="@id/location"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SAVE"
+            android:textStyle="bold"
+            android:layout_below="@id/location_inf"
+            android:id="@+id/edit_suggestion_save"/>
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/logout"
+        android:title="Logout"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/chats_icon"
+        android:title="Chats"
+        app:showAsAction="always"
+        android:icon="@mipmap/ic_chat"/>
+
+    <item
+        android:id="@+id/event_icon"
+        android:title="events"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_star"/>
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="Search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/filter_icon"
+        android:icon="@drawable/ic_filter"
+        android:title="Filter"
+        app:showAsAction="always" />
+
+</menu>
